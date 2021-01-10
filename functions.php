@@ -12,6 +12,8 @@ function alpha_bootstrapping() {
     load_theme_textdomain('alpha');
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
+    register_nav_menu('topmenu', __('Top Menu', 'alpha'));
+    register_nav_menu('footermenu', __('Footer Menu', 'alpha'));
 }
 
 add_action('after_setup_theme', 'alpha_bootstrapping');
@@ -24,6 +26,9 @@ function alpha_assets() {
 //    exit();
     wp_enqueue_style("alpha", get_stylesheet_uri());
     wp_enqueue_style('bootstrap', "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+    wp_enqueue_style('featherlight-css',"//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css");
+
+    wp_enqueue_script('featerlight-js',"//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js",array("jquery"),"0.0.1",true);
 
 }
 add_action('wp_enqueue_scripts', 'alpha_assets');
@@ -111,4 +116,8 @@ add_filter('protected_title_format', 'alpha_protected_title_change');
 
 //----------------------------------------------
 
-
+function alpha_nav_menu_css_class($classes, $item) {
+    $classes[] = 'list-inline-item';
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'alpha_nav_menu_css_class', 10,2);

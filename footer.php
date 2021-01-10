@@ -10,10 +10,20 @@
             </div>
             <div class="col-md-6">
 
+<!--                --><?php
+//                    if(is_active_sidebar('footer-right')) {
+//                        dynamic_sidebar('footer-right');
+//                    }
+//                ?>
+
                 <?php
-                    if(is_active_sidebar('footer-right')) {
-                        dynamic_sidebar('footer-right');
-                    }
+                    wp_nav_menu(
+                            array(
+                                'theme_location' => 'footermenu',
+                                'id' => 'footermenu-container',
+                                'menu_class' => 'list-inline text-right'
+                            )
+                    );
                 ?>
 
             </div>

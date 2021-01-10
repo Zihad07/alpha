@@ -29,7 +29,10 @@
                                     <p>
                                         <?php
                                         if(has_post_thumbnail()){
+                                            $thumnail_url = get_the_post_thumbnail_url(null, 'large');
+                                            printf('<a href="%s" data-featherlight="image">', $thumnail_url);
                                             the_post_thumbnail('large', array("class"=> "img-fluid"));
+                                            printf('</a>');
                                         }
                                         ?>
                                     </p>
