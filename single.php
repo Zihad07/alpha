@@ -29,10 +29,15 @@
                                     <p>
                                         <?php
                                         if(has_post_thumbnail()){
-                                            $thumnail_url = get_the_post_thumbnail_url(null, 'large');
-                                            printf('<a href="%s" data-featherlight="image">', $thumnail_url);
+//                                            $thumnail_url = get_the_post_thumbnail_url(null, 'large');
+//                                            printf('<a href="%s" data-featherlight="image">', $thumnail_url);
+//                                            the_post_thumbnail('large', array("class"=> "img-fluid"));
+//                                            printf('</a>');
+
+
+                                            echo'<a class="popup-img" href="#" data-featherlight="image">';
                                             the_post_thumbnail('large', array("class"=> "img-fluid"));
-                                            printf('</a>');
+                                            echo '</a>';
                                         }
                                         ?>
                                     </p>
