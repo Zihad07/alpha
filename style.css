@@ -87,3 +87,17 @@ My Style
     font-family: Arial,Verdana,Helvetica,sans-serif;
     font-size: 10px;
 }
+
+
+
+.page-header{
+    background-position: center;
+    background-size: cover;
+    margin-bottom:30px;
+    padding:170px 0px;
+}
+
+.page-header h1>a {
+    text-decoration: none;
+    color: gray;
+}
