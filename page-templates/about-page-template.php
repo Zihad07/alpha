@@ -4,7 +4,7 @@
  * Template Name: About Page Template
  */
 get_header();?>
-<?php get_template_part('hero-page');?>
+<?php get_template_part('/template-parts/about-page/hero-page');?>
     <div class="posts">
         <?php
         while(have_posts()):

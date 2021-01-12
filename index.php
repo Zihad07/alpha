@@ -1,5 +1,5 @@
 <?php get_header();?>
-<?php get_template_part('hero');?>
+<?php get_template_part('/template-parts/common/hero');?>
 <div class="posts">
     <?php
         while(have_posts()):
