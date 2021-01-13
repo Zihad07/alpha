@@ -101,3 +101,17 @@ My Style
     text-decoration: none;
     color: gray;
 }
+
+.header-logo {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.header-logo img{
+    border-radius: 50px;
+    border: 2px solid darkgray;
+    /*text-align: center;*/
+
+
+
+}
